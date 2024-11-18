@@ -1,0 +1,15 @@
+services:
+
+  backend:
+    build:
+      context: ./backend
+    container_name: backend_server
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8080:8007"
+      - "80:8007"
