@@ -72,8 +72,8 @@ class CardProperties:
 
     def __str__(self):
         # String representation for CardProperties
-        class_name = Class(self.class_) if self.class_ else "None"
-        rarity_name = Rarity(self.rarity) if self.rarity else "None"
-        power_name = Power(self.power) if self.power else "None"
+        class_name = Class(self.class_)
+        rarity_name = Rarity(self.rarity)
+        power_name = Power(self.power)
 
         return f"Card Properties: Class = {class_name}, Rarity = {rarity_name}, Power = {power_name}"
